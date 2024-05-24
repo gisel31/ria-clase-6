@@ -1,0 +1,20 @@
+<div class="modificar-container">
+    <h2 class="form-title" style="text-align: center;">Modificar Hospital Seleccionado</h2>
+    <form (ngSubmit)="modificarHospital()" class="example-form">
+        <div class="form-row">
+            <mat-form-field class="example-full-width" style="width: 100%;">
+                <input matInput placeholder="Nombre" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field class="example-full-width"  style="width: 100%;">
+                <input matInput placeholder="Dirección" id="direccion" name="direccion" [(ngModel)]="direccion" required>
+            </mat-form-field>
+        </div>
+        <div class="form-row buttons-row">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!datosCargados">Guardar Cambios</button>
+            <div style="margin-left: 10px;"></div>
+            <button mat-button type="button" mat-raised-button color="secondary" (click)="cancelarModificar()">Cancelar</button>
+        </div>
+    </form>
+</div>

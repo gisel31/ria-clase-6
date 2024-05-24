@@ -1,0 +1,15 @@
+<div class="borrado-container">
+    <div class="detalle-hospital">
+        <h2 class="form-title" style="text-align: center;">Hospital Seleccionado</h2>
+        <p><strong>Nombre:</strong> {{ nombre || 'Cargando...' }}</p>
+        <p><strong>Dirección:</strong> {{ direccion || 'Cargando...' }}</p>
+    </div>
+    <hr>
+    <div class="confirmacion-borrado" style="text-align: center;">
+        <h2>¿Desea borrarlo?</h2>
+        <button mat-raised-button color="warn" [disabled]="!datosCargados"
+            (click)="confirmarBorrado( hospital?.id)">Sí</button>
+        <button mat-raised-button color="primary" [disabled]="!datosCargados" (click)="cancelarBorrado()">No</button>
+    </div>
+    <hr>
+</div>
